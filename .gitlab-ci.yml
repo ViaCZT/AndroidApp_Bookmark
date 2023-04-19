@@ -1,0 +1,14 @@
+stages:
+  - checkBuildTest
+
+check-build-test-job:
+  tags:
+      - comp2100
+  stage: checkBuildTest 
+  script:
+   - bash /home/Labs/shared/labCallerLoop.sh all "${GITLAB_USER_LOGIN}" "${GITLAB_USER_NAME}" "${CI_PROJECT_NAME}" "$CI_PROJECT_DIR"
+  artifacts:
+    reports:
+      junit:
+        - "${CI_PROJECT_DIR}/reports/*.xml"
+
