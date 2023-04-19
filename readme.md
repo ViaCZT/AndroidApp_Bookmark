@@ -6,7 +6,7 @@ All information to complete this lab, including instructions for completion and 
 
 We also prepared a short video to help you get started. It is designed to be watched before the lab and contains helpful information about the content of the lab.
 
-[Lab video Link](https://gitlab.cecs.anu.edu.au/comp2100/student-resources/comp2100-lab-videos/-/blob/main/lab7-videos/Lab5Video.mp4)
+[Lab video Link](https://gitlab.cecs.anu.edu.au/comp2100/student-resources/comp2100-lab-videos/-/blob/main/lab7-videos/Lab7Video.mp4)
 
 Note that if the above links do not work, you can find the corresponding files in the lab7-videos folder in the ``comp2100-lab-videos`` repository and the manual directory respectively.
 
