@@ -27,7 +27,7 @@ Submission functions differently for this lab: you **must** demonstrate your cod
 
 ***Assignment deadline***: See the deadline on Wattle, as always.
 
-**Submission mode**: via demonstration to your lab tutor during your lab in week 6 or 7; and via your GitLab fork of this repository.
+**Submission mode**: via demonstration to your lab tutor during your lab in week 8 or 9; and via your GitLab fork of this repository.
 
 **Submission guidelines checklist**:
 
