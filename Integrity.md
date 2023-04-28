@@ -1,5 +1,5 @@
 ## Pledge of Academic Integrity
-<DO NOT MODIFY THE STRUCTURE OF THIS FILE>
+<DO NOT MODIFY THE STRUCTURE OF THIS FILE>;
 
 I am committed to being a person of integrity.
 
@@ -13,16 +13,16 @@ and understand the consequences of me breaching those rules. I confirm that my a
 
 **Signed:**
 
-Name:
+Name: Zetian Chen
 
-UID:
+UID: u7564812
 
-Date:
+Date: 2023-04-29
 
 
 ### Questions (answer before final submission):
 1) You completed this work (tick the most appropriate option): 
-- [ ] by yourself without the help of others; 
+- [x] by yourself without the help of others; 
 - [ ] in a pair; or,
 - [ ] with Gen AI tools (e.g., ChatGPT, Co-Pilot).
 
