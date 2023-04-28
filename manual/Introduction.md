@@ -10,9 +10,9 @@ Some students encounter errors regarding the HAXM Manager, so we have supplied s
 
 ## Agenda
 
-- [ ] **[Task 1: Layout](Task1Layout.md)**: Create the application, and give it a responsive layout.
-- [ ] **[Task 2: Functionality](Task2Functionality.md)**: Add the functionality to add, list, and view bookmarks.
-- [ ] **Submission:** I have had my code marked by a tutor in my lab *(see below for details)*
+- [x] **[Task 1: Layout](Task1Layout.md)**: Create the application, and give it a responsive layout.
+- [x] **[Task 2: Functionality](Task2Functionality.md)**: Add the functionality to add, list, and view bookmarks.
+- [x] **Submission:** I have had my code marked by a tutor in my lab *(see below for details)*
 
 Note: putting an 'x' in the third box above is required for the Gitlab CI to pass.
 
