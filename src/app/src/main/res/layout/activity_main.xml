@@ -18,7 +18,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
@@ -35,8 +34,8 @@
         android:labelFor="@id/EditTextId"
         android:minHeight="48dp"
         android:text="@string/please_enter_the_url"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintEnd_toStartOf="@id/addButtonId"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tittle_bookmark" />
 
@@ -49,21 +48,19 @@
         android:layout_marginEnd="10dp"
         android:text="@string/add_url"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/EditTextId"
         app:layout_constraintTop_toBottomOf="@+id/tittle_bookmark" />
 
     <ListView
         android:id="@+id/ListViewId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditTextId"
-        app:layout_constraintVertical_bias="0"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
