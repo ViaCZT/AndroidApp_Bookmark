@@ -1,20 +1,23 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String URL_REGEX = "^((http[s]?|ftp)://)?(www\\.)?[a-zA-Z0-9]+\\.[a-zA-Z]+(\\.[a-zA-Z]+)*(:[0-9]+)?(/[\\w#!:.?+=&%@\\-/]+)?/?$";
+    private static final Pattern URL_PATTERN = Pattern.compile(URL_REGEX);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,14 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.EditTextId);
         button.setOnClickListener(v -> {
             String text = editText.getText().toString();
-            url_array.add(text);
+            Matcher matcher = URL_PATTERN.matcher(text);
+            if (!matcher.matches()){
+                Toast.makeText(getApplicationContext(), "URL is invalid", Toast.LENGTH_LONG).show();
+            } else if (url_array.contains(text)){
+                Toast.makeText(getApplicationContext(), "URL is reduplicated", Toast.LENGTH_LONG).show();
+            } else {
+                url_array.add(text);
+            }
             editText.setText("");
             adapter.notifyDataSetChanged();
         });
