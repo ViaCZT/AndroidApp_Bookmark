@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.Toast;
 
-public class ActivityWeb extends AppCompatActivity {
+public class WebActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class ActivityWeb extends AppCompatActivity {
         Intent intent = getIntent();
         String url = intent.getStringExtra("URL");
         if (url == null || url.equals("")){
-            Toast.makeText(getApplicationContext(), "URL is invalid", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "URL is empty", Toast.LENGTH_LONG).show();
         }else {
             WebView webView = (WebView) findViewById(R.id.WebView);
             webView.loadUrl(url);
