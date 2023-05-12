@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,9 +22,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        EditText username = (EditText) findViewById(R.id.Login_editText_userName);
-        EditText password = (EditText) findViewById(R.id.Login_editText_Password);
-        Button login_bt = (Button) findViewById(R.id.Login_button_LOGIN);
+        FirebaseApp.initializeApp(getBaseContext());
+
+        EditText username = findViewById(R.id.Login_editText_userName);
+        EditText password = findViewById(R.id.Login_editText_Password);
+        Button login_bt = findViewById(R.id.Login_button_LOGIN);
 
         login_bt.setOnClickListener(v -> {
             String userName = username.getText().toString();
