@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 //        url_array.add("https://www.google.com/");
 
             // Get url list for specific user
-        User user = getIntent().getExtras().getSerializable("USER", User.class);
+        User user = (User) getIntent().getExtras().getSerializable("USER", User.class);
         String id = user.getId();
 //           //【1】load data from res.raw folder
 //        int resourceID = R.raw.data;
@@ -124,20 +124,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void readFire(String reference, List<String> url_list1, ArrayAdapter<String> adapter){
-        System.out.println("Start readFire");
+//        System.out.println("Start readFire");
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference("URLs").child(reference);
-
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot childSnapshot: snapshot.getChildren()){
                     String url = childSnapshot.getValue(String.class);
-                    System.out.println("url: "+url);
+//                    System.out.println("url: "+url);
                     url_list1.add(url);
-                    System.out.println("url_list 1 "+url_list1);
+//                    System.out.println("url_list 1 "+url_list1);
                 }
-
                 adapter.notifyDataSetChanged();
             }
 
@@ -146,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 System.err.println("Failed to retrieve data, error: " + error.toException());
             }
         });
-        System.out.println("url_list: "+url_list1);
+//        System.out.println("url_list: "+url_list1);
     }
 
 }
